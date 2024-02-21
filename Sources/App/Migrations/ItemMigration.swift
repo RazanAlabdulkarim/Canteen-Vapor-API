@@ -22,3 +22,4 @@ struct ItemMigration: AsyncMigration{
         try await database.schema("items")
             .delete()
     }
+}
