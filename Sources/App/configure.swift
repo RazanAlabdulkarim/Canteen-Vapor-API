@@ -14,4 +14,16 @@ public func configure(_ app: Application) async throws {
                                                              tls:.prefer(try .init(configuration: .clientDefault)))),     as: .psql)
     
     try routes(app)
+    
+    
+    
+    //Migrations
+//    app.migrations.add(CanteenTable())
+//    try await app.autoMigrate()
+    
 }
+
+
+
+
+

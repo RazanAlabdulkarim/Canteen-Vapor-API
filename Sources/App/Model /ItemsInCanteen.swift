@@ -7,7 +7,7 @@
 
 import Vapor
 import Fluent 
-final class ItemsInCanteen: Model {
+final class ItemsInCanteen: Model, Content {
     static let schema = "items_in_canteen"
     
     @ID(key: .id)
