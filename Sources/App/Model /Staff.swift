@@ -1,6 +1,13 @@
 //
 //  File.swift
-//  
+//
+//
+//  Created by Sara Ibrahim Almashharawi on 18/02/2024.
+//
+
+//
+//  File.swift
+//
 //
 //  Created by Razan Alabdulkarim on 08/08/1445 AH.
 //
@@ -11,7 +18,7 @@ import Fluent
 final class Staff: Model, Content {
     static let schema = "staff"
     
-    @ID(key: .id)
+    @ID
     var id: UUID?
     
     @Field(key: "name")

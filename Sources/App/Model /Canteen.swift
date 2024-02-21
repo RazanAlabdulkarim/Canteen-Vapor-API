@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Razan Alabdulkarim on 08/08/1445 AH.
 //
@@ -10,7 +10,7 @@ import Fluent
 final class Canteen: Model, Content {
     static let schema = "canteens"
     
-    @ID(key: .id)
+    @ID
     var id: UUID?
     
     @Field(key: "school_name")
@@ -25,6 +25,11 @@ final class Canteen: Model, Content {
     // Relationship: ItemsInCanteen
     @Siblings(through: ItemsInCanteen.self, from: \.$canteen, to: \.$item)
     var items: [Item]
+    
+    
+    @Children(for: \.$canteen)
+    var staff: [Staff]
+    
     
     init() {}
     

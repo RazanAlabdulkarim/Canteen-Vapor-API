@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Razan Alabdulkarim on 08/08/1445 AH.
 //
@@ -11,7 +11,7 @@ import Fluent
 final class Item: Model, Content {
     static let schema = "items"
     
-    @ID(key: .id)
+    @ID
     var id: UUID?
     
     @Field(key: "name")

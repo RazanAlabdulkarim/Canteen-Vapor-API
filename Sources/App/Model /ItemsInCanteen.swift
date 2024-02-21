@@ -1,16 +1,16 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Razan Alabdulkarim on 08/08/1445 AH.
 //
 
 import Vapor
-import Fluent 
-final class ItemsInCanteen: Model, Content {
+import Fluent
+final class ItemsInCanteen: Model , Content {
     static let schema = "items_in_canteen"
     
-    @ID(key: .id)
+    @ID
     var id: UUID?
     
     @Parent(key: "item_id")

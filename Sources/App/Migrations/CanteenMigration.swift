@@ -1,16 +1,17 @@
 //
 //  File.swift
-//  
 //
-//  Created by Razan Alabdulkarim on 09/08/1445 AH.
 //
+//  Created by Sara Ibrahim Almashharawi on 20/02/2024.
+//
+
 
 import Fluent
 
-struct CanteenMigration : AsyncMigration{
-    //add - create
+struct CreateCanteenTableMigration : AsyncMigration{
+    
     func prepare(on database: Database) async throws {
-        try await database.schema("canteendb")
+        try await database.schema("canteens")
             .id()
             .field("school_name", .string)
             .field("capacity", .int)
@@ -18,9 +19,9 @@ struct CanteenMigration : AsyncMigration{
             .create()
     }
     
-    //undo - deleate
     func revert(on database: Database) async throws {
-        try await database.schema("canteendb")
+        try await database.schema("canteens")
             .delete()
+
     }
 }
