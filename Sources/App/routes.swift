@@ -5,13 +5,7 @@ func routes(_ app: Application) throws {
     
     try app.register(collection: StaffControllers())
 
+    try app.register(collection: ItemController())
     
-//    app.group("canteens"){ canteens in
-//        app.get("all") { req async -> String in
-//        return "all canteens displayed"}
-//
-//        app.get("create") { req async -> String in
-//        return "new canteen created"}
-//
-//    }
+    
 }
