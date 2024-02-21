@@ -35,4 +35,3 @@ final class Canteen: Model, Content {
         self.location = location
     }
 }
-

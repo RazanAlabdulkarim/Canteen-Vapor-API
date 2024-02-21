@@ -1,12 +1,17 @@
 import Vapor
-import Fluent
 
 func routes(_ app: Application) throws {
-    app.get { req async in
-        "It works!"
-    }
+    try app.register(collection: CanteenControllers())
+    
+    try app.register(collection: StaffControllers())
 
-    app.get("hello") { req async -> String in
-        "Hello, world!"
-    }
+    
+//    app.group("canteens"){ canteens in
+//        app.get("all") { req async -> String in
+//        return "all canteens displayed"}
+//
+//        app.get("create") { req async -> String in
+//        return "new canteen created"}
+//
+//    }
 }
