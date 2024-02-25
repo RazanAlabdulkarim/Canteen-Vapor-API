@@ -18,7 +18,7 @@ struct CanteenControllers: RouteCollection {
         Canteens.put( ":id", use: update)
         Canteens.delete( ":id", use: delete)
     }
-
+    
 }
 
 func create(req: Request) async throws -> Canteen {
@@ -33,13 +33,13 @@ func read(req: Request) async throws -> Canteen {
         throw Abort(.notFound)
     }
     return canteenInDB
-
+    
 }
 
 func readAll(req: Request) async throws -> [Canteen] {
     
     return try await Canteen.query(on: req.db).all()
-
+    
 }
 
 func update(req: Request) async throws -> Canteen {
@@ -47,7 +47,7 @@ func update(req: Request) async throws -> Canteen {
     guard let canteeninDb = try await Canteen.find(newCanteen.id, on: req.db) else {
         throw Abort(.notFound)
     }
-    
+
     canteeninDb.schoolName = newCanteen.schoolName
     canteeninDb.capacity = newCanteen.capacity
     canteeninDb.location = newCanteen.location

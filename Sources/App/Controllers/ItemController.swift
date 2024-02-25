@@ -15,9 +15,11 @@ struct ItemController: RouteCollection {
     
     func boot (routes: Vapor.RoutesBuilder) throws {
         let Items = routes.grouped("items")
-        Items.get(":itemId", use: read)
+        Items.get( use: readAll)
+        Items.get( ":id",  use: readById)
         Items.post( use: create)
-        Items.put( use: update)
+//        Canteens.put( ":id", use: update)
+        Items.put( ":id", use: update)
         Items.delete( ":id", use: delete)
         
     }
@@ -48,15 +50,11 @@ struct ItemController: RouteCollection {
         return ItemDB
     }
     
-    
-    
-    func read (req: Request) async throws -> [Item]{
+    func readAll (req: Request) async throws -> [Item]{
         return try await Item.query(on: req.db).all()
     }
     
-    
-    
-    func readt (req: Request) async throws -> Item {
+    func readById (req: Request) async throws -> Item {
         let ItemId = req.parameters.get("id", as: UUID.self)
         guard let ItemDB = try await Item.find(ItemId, on: req.db) else {
             throw Abort (.notFound)
