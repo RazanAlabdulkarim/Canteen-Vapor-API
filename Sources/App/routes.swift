@@ -7,5 +7,7 @@ func routes(_ app: Application) throws {
 
     try app.register(collection: ItemController())
     
+    try app.register(collection: ItemsInCanteenController())
+    
     
 }
