@@ -154,7 +154,8 @@ All endpoints support JSON encoding and decoding of each Canteen, Staff, Item an
 
 ## Visual Interface
 <br> <img width="1327" alt="Screenshot 1445-08-16 at 2 58 59 PM" src="https://github.com/RazanAlabdulkarim/CanteenHub/assets/95241727/ac7a5051-8efd-4cfe-a8dd-2af7cd5a2774">
-<img width="1332" alt="Screenshot 1445-08-16 at 2 58 49 PM" src="https://github.com/RazanAlabdulkarim/CanteenHub/assets/95241727/9428d32f-c156-49b5-bd9c-8ec9b7d28a5c">
+<img width="1322" alt="Screenshot 1445-08-17 at 12 19 22 AM" src="https://github.com/RazanAlabdulkarim/CanteenHub/assets/95241727/b1f07aa7-e6b5-46bc-8f5f-673d8d735433">
+
 
 ## Credits
 
