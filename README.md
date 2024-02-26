@@ -41,4 +41,112 @@ Ensure you have the following tools downloaded:
 Vapor 4 requires Swift 5.6 or greater.
 
 
+## Tables and Relationships:
+
+#### 1- Staff
+
+| Parameter    | Type     | Description                |
+| :--------    | :------- | :------------------------- |
+| `id`         |   `UUID` |     **`PRIMARY KEY`**      |
+| `name`       | `String` |                            |
+| `salary`     | `Double` |                            |
+| `phoneNumber`| `String` |                            |
+| `role`       | `String` |                            |
+| `canteen`    | `Canteen`|     **`FOREIGN KEY`**      |
+
+Where Route 
+```http
+  http://127.0.0.1:8080/staff
+```
+
+| Request Method	  | Route   | Action                               |
+| :--------------- | :------ | :----------------------------------  |
+|  GET             |         |                                      |
+|  GET             |   /id   |                                      |
+|  POST            |         |                                      |
+|  PUT             |         |                                      |
+|  DELETE          |   /id   | Deletes an existing Staff item by ID.|
+
+
+
+
+#### 2- Canteen
+
+| Parameter    | Type     | Description                |
+| :--------    | :------- | :------------------------- |
+| `id`         |   `UUID` |       **`PRIMARY KEY`**    |
+| `schoolName` | `String` |                            |
+| `capacity`   | `Int`    |                            |
+| `location`   | `String` |                            |
+
+Where Route 
+```http
+  http://127.0.0.1:8080/canteens
+```
+
+| Request Method	  | Route | Action                                |
+| :--------------- | :-----| :------------------------------------ |
+|  GET             |       | Returns a list of all Canteen         |
+|  GET             |   /id | Returns a list of Canteen by ID       |
+|  POST            |       | Creates a new Canteen List            |
+|  PUT             |       | Updates an existing Canteen by ID     |
+|  DELETE          |   /id | Deletes an existing Canteen by ID     |
+
+
+
+#### 3- Item
+
+| Parameter | Type     | Description                 |
+| :-------- | :------- | :-------------------------  |
+| `id`      |   `UUID` |       **`PRIMARY KEY`**     |
+| `name`    | `String` |                             |
+| `price`   | `Double` |                             |
+
+Where Route 
+```http
+  http://127.0.0.1:8080/items
+```
+
+| Request Method	  | Route | Action                                |
+| :--------------- | :-----| :------------------------------------ |
+|  GET             |       | Returns a list of all Items           |
+|  GET             |   /id | Returns a list of Items by ID         |
+|  POST            |       | Creates a new Item List.              |
+|  PUT             |       | Updates an existing Item by ID        |
+|  DELETE          |   /id | Deletes an existing Items by ID.      |
+
+
+
+
+#### 4- Items In Canteen
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id`      |   `UUID` |       **`PRIMARY KEY`**    |
+| `quantity`| `Int`    |                            |
+| `item`    | `Item`   |       **`FOREIGN KEY`**    |
+| `canteen` | `Canteen`|       **`FOREIGN KEY`**    |
+
+Where Route 
+```http
+  http://127.0.0.1:8080/itemsInCanteen
+```
+
+| Request Method	  | Route  | Action                                          |
+| :--------------- | :-----| :------------------------------------            |
+|  GET             |       | Returns a list of all Items In Canteen           |
+|  GET             |   /id | Returns a list of Items In Canteen by ID         |
+|  POST            |       | Creates a new Items In Canteen List              |
+|  PUT             |       | Updates an existing Items In Canteen by ID       |
+|  DELETE          |   /id | Deletes an existing Items In Canteen by ID.      |
+
+
+## Authors
+
+| Authors        |    Content 🔗                                   |
+| -------------- |------------------------------------------------ |
+|**Razan Alabdulkarim**| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/razan-alabdulkarim?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)|
+|**Alhanouf Alhamied**| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alhanoufalhamied)|
+|**Sara Almashharawi**| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sara-almashharawi/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)|
+
 
