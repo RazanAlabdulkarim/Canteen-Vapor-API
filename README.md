@@ -158,7 +158,7 @@ All endpoints support JSON encoding and decoding of each Canteen, Staff, Item an
 
 ## Authors
 
-| Authors        |    Content 🔗                                   |
+| Credits        |    Content 🔗                                   |
 | -------------- |------------------------------------------------ |
 |**Razan Alabdulkarim**| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/razan-alabdulkarim?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)|
 |**Alhanouf Alhamied**| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alhanoufalhamied)|
