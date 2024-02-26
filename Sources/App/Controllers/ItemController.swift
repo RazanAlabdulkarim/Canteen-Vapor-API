@@ -18,7 +18,6 @@ struct ItemController: RouteCollection {
         Items.get( use: readAll)
         Items.get( ":id",  use: readById)
         Items.post( use: create)
-//        Canteens.put( ":id", use: update)
         Items.put( ":id", use: update)
         Items.delete( ":id", use: delete)
         

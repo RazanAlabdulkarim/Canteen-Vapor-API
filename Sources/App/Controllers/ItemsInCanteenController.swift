@@ -15,6 +15,7 @@ struct ItemsInCanteenController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
         let itemsInCanteen = routes.grouped("itemsInCanteen")
         itemsInCanteen.post(use: create)
+        itemsInCanteen.get( use: readAll)
         itemsInCanteen.get(":id", use: read)
         itemsInCanteen.put(use: update)
         itemsInCanteen.delete(":id", use: delete)
@@ -38,7 +39,7 @@ struct ItemsInCanteenController: RouteCollection {
     }
     
     func delete(req: Request) async throws -> ItemsInCanteen {
-        let ItemsInCanteenId = try req.parameters.get("id", as: UUID.self)
+        let ItemsInCanteenId = req.parameters.get("id", as: UUID.self)
         guard let ItemsInCanteenDB = try await ItemsInCanteen.find(ItemsInCanteenId, on: req.db) else {
             throw Abort(.notFound)
         }
@@ -46,6 +47,9 @@ struct ItemsInCanteenController: RouteCollection {
         return ItemsInCanteenDB
     }
     
+    func readAll (req: Request) async throws -> [ItemsInCanteen] {
+        return try await ItemsInCanteen.query(on: req.db).all()
+    }
     
     func read(req: Request) async throws -> ItemsInCanteen {
         let ItemsInCanteenId = req.parameters.get("id", as: UUID.self)
