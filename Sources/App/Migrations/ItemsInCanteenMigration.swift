@@ -9,7 +9,7 @@ import Fluent
 
 struct ItemsInCanteenMigration: AsyncMigration {
     func prepare(on database: Database) async throws {
-        try await database.schema("canteendb")
+        try await database.schema("itemsincanteen")
             .id()
             .field("item_id", .uuid, .references("items", "id"))
             .field("canteen_id", .uuid, .references("canteens", "id"))
@@ -18,7 +18,7 @@ struct ItemsInCanteenMigration: AsyncMigration {
     }
     
     func revert(on database: Database) async throws {
-        try await database.schema("canteendb")
+        try await database.schema("itemsincanteen")
             .delete()
     }
 }

@@ -8,7 +8,7 @@
 import Vapor
 import Fluent
 final class ItemsInCanteen: Model , Content {
-    static let schema = "items_in_canteen"
+    static let schema = "itemsincanteen"
     
     @ID
     var id: UUID?
