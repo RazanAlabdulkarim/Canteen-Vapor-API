@@ -17,6 +17,10 @@ This project showcases the development of a RESTful API integrated with a Postgr
 To use this project, clone the repository and ensure you have Vapor installed on your system. Set up a PostgreSQL database and configure the database connection in the project settings. Then, you can run the project locally and access the RESTful API endpoints using tools like Postman for testing and interaction.
 
 
+## App Statement
+A RESTful API integrated with PSQL database for Canteens Supplier-tracking iOS app
+
+
 ## Required Tools 🛠️
 
 Ensure you have the following tools downloaded:
