@@ -140,6 +140,8 @@ Where Route
 |  PUT             |       | Updates an existing Items In Canteen by ID       |
 |  DELETE          |   /id | Deletes an existing Items In Canteen by ID.      |
 
+example 
+<img width="843" alt="Screenshot 1445-08-16 at 2 22 04 PM" src="https://github.com/RazanAlabdulkarim/CanteenHub/assets/95241727/a3af5a9d-f65d-43d9-9e60-3c73e506253a">
 
 ## Authors
 
