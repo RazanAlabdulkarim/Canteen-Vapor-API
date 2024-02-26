@@ -140,8 +140,17 @@ Where Route
 |  PUT             |       | Updates an existing Items In Canteen by ID       |
 |  DELETE          |   /id | Deletes an existing Items In Canteen by ID.      |
 
-example 
-<img width="843" alt="Screenshot 1445-08-16 at 2 22 04 PM" src="https://github.com/RazanAlabdulkarim/CanteenHub/assets/95241727/a3af5a9d-f65d-43d9-9e60-3c73e506253a">
+
+
+All endpoints support JSON encoding and decoding of each Canteen, Staff, Item and Item In Canteens. To create, delete, retreive, or update, send a JSON payload in the request body.
+
+## Example
+
+<br><img width="843" alt="Screenshot 1445-08-16 at 2 22 04 PM" src="https://github.com/RazanAlabdulkarim/CanteenHub/assets/95241727/a3af5a9d-f65d-43d9-9e60-3c73e506253a">
+
+## Visual Interface
+<br> <img width="1327" alt="Screenshot 1445-08-16 at 2 58 59 PM" src="https://github.com/RazanAlabdulkarim/CanteenHub/assets/95241727/ac7a5051-8efd-4cfe-a8dd-2af7cd5a2774">
+<img width="1332" alt="Screenshot 1445-08-16 at 2 58 49 PM" src="https://github.com/RazanAlabdulkarim/CanteenHub/assets/95241727/9428d32f-c156-49b5-bd9c-8ec9b7d28a5c">
 
 ## Authors
 
