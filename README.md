@@ -61,10 +61,10 @@ Where Route
 
 | Request Method	  | Route   | Action                               |
 | :--------------- | :------ | :----------------------------------  |
-|  GET             |         |                                      |
-|  GET             |   /id   |                                      |
-|  POST            |         |                                      |
-|  PUT             |         |                                      |
+|  GET             |  /canteen/canteenId       | Returns all the Staff in Canteen     |
+|  GET             |   /id   | Returns a Staff by ID                       |
+|  POST            |         | Creates a new Staff                                      |
+|  PUT             |         | Updates an existing Staff by ID                                        |
 |  DELETE          |   /id   | Deletes an existing Staff item by ID.|
 
 
@@ -87,7 +87,7 @@ Where Route
 | Request Method	  | Route | Action                                |
 | :--------------- | :-----| :------------------------------------ |
 |  GET             |       | Returns a list of all Canteen         |
-|  GET             |   /id | Returns a list of Canteen by ID       |
+|  GET             |   /id | Returns a Canteen by ID       |
 |  POST            |       | Creates a new Canteen List            |
 |  PUT             |       | Updates an existing Canteen by ID     |
 |  DELETE          |   /id | Deletes an existing Canteen by ID     |
@@ -111,9 +111,9 @@ Where Route
 | :--------------- | :-----| :------------------------------------ |
 |  GET             |       | Returns a list of all Items           |
 |  GET             |   /id | Returns a list of Items by ID         |
-|  POST            |       | Creates a new Item List.              |
+|  POST            |       | Creates a new Item               |
 |  PUT             |       | Updates an existing Item by ID        |
-|  DELETE          |   /id | Deletes an existing Items by ID.      |
+|  DELETE          |   /id | Deletes an existing Items by ID     |
 
 
 
