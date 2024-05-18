@@ -54,7 +54,7 @@ Vapor 4 requires Swift 5.6 or greater.
 | `id`         |   `UUID` |     **`PRIMARY KEY`**      |
 | `name`       | `String` |                            |
 | `salary`     | `Double` |                            |
-| `phoneNumber`| `String` |                            |
+| `phone_number`| `String` |                            |
 | `role`       | `String` |                            |
 | `canteen`    | `Canteen`|     **`FOREIGN KEY`**      |
 
@@ -79,7 +79,7 @@ Where Route
 | Parameter    | Type     | Description                |
 | :--------    | :------- | :------------------------- |
 | `id`         |   `UUID` |       **`PRIMARY KEY`**    |
-| `schoolName` | `String` |                            |
+| `school_name` | `String` |                            |
 | `capacity`   | `Int`    |                            |
 | `location`   | `String` |                            |
 
